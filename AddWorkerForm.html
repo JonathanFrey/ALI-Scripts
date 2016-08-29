@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <style>
+      .right {
+        float: right;
+      }
+      
+      .left {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <div class="left">
+        <div class="block form-group">
+          <label for="name"><b>Name:</b></label>
+          <input type="text" name="name"><br>
+         
+          <label for="email"><b>Email:</b></label>
+          <input type="text" name="email"><br>
+         
+          <label for="ws-group"><b>Work Study:</b></label>
+          <div id="ws-group" class="block">
+            <input type="radio" name="ws" value="yes" checked> Yes
+            <input type="radio" name="ws" value="no"> No<br>
+          </div><br>
+
+          <label for="mentor"><b>Mentor:</b></label>
+          <input type="text" name="mentor"><br>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="block form-group">
+          <label for="phone"><b>Phone Number:</b></label>
+          <input type="tel" name="phone"><br>
+
+          <label for="major"><b>Major:</b></label>
+          <input type="text" name="major"><br>
+
+          <label for="re-group"><b>Returning:</b></label>
+          <div id="re-group" class="block">
+            <input type="radio" name="re" value="yes" checked> Yes
+            <input type="radio" name="re" value="no"> No<br>
+          </div><br>
+
+          <label for="grad"><b>Graduation:</b></label>
+          <input type="text" name="grad"><br>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+      
+      <div class="block">
+        <input type ="button" class="action" value="Submit" onclick="google.script.run.addWorker(this.form);google.script.host.close()"/>
+        <input type="button" value="Close" onclick="google.script.host.close()"/>
+      </div>
+    </form>
+  </body>
+</html>
